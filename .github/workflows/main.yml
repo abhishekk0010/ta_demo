@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHONPATH: /home/runner/work/demo-repo4/demo-repo4/
+  PYTHONPATH: /home/runner/work/ta_demo/ta_demo/
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -46,9 +46,7 @@ jobs:
         run: make dev_env
 
       - name: Run Python tests.
-        run:
-            echo "PYTHONPATH=${PYTHONPATH}"
-            make all_tests
+        run: make all_tests
         
           # - name: Deploy to PythonAnywhere
           # run: ./deploy.sh
